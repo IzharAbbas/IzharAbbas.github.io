@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Izhar Abbas — AI Automation & Digital Services</title>
+<meta name="description" content="Izhar Abbas — AI Automation, Web Development, Data Scraping, Research, Social Media Management, and Video Editing services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="fluid-bg"></canvas>
+<div class="grid-bg"></div>
+
+<header>
+  <div class="brand"><span class="brand-dot"></span> IZHAR ABBAS</div>
+  <nav id="site-nav">
+    <a href="#why" data-nav-link>Why I Build</a>
+    <a href="#journey" data-nav-link>Journey</a>
+    <a href="#skills" data-nav-link>Skills</a>
+    <a href="#bank-accounts" data-nav-link>Bank Accounts</a>
+    <a href="#projects" data-nav-link>Projects</a>
+    <a href="#contact" data-nav-link>Contact</a>
+  </nav>
+  <div class="nav-status"><span class="pulse"></span> Available for work</div>
+  <button id="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+<nav id="mobile-nav">
+  <a href="#why" data-nav-link>Why I Build</a>
+  <a href="#journey" data-nav-link>Journey</a>
+  <a href="#skills" data-nav-link>Skills</a>
+  <a href="#bank-accounts" data-nav-link>Bank Accounts</a>
+  <a href="#projects" data-nav-link>Projects</a>
+  <a href="#contact" data-nav-link>Contact</a>
+</nav>
+
+<section class="hero" style="border-top:none; padding-top: 8vh;">
+  <div class="eyebrow mono">AI AUTOMATION · DEVELOPMENT · DIGITAL SERVICES</div>
+  <h1>Izhar Abbas builds things that <span class="accent-word">think</span> and <span class="accent-word">ship</span>.</h1>
+  <p class="hero-sub">I design and build AI-powered tools, automations, and web products — from the first prototype to something real people use every day.</p>
+  <div class="hero-actions">
+    <a href="#projects" class="btn btn-primary">See my work</a>
+    <a href="#contact" class="btn btn-ghost">Get in touch</a>
+  </div>
+
+  <div class="terminal mono">
+    <div class="terminal-bar">
+      <span class="dot" style="background:#ff5f56"></span>
+      <span class="dot" style="background:#ffbd2e"></span>
+      <span class="dot" style="background:#27c93f"></span>
+    </div>
+    <div class="terminal-body">
+      <div class="line"><span class="prompt">izhar@dev</span> ~ % whoami</div>
+      <div class="out" id="typed"></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" style="padding-top:90px; padding-bottom:90px;">
+  <div style="max-width: 760px;">
+    <div class="eyebrow mono" style="margin-bottom:20px;">WHY I BUILD</div>
+    <p style="font-size: clamp(1.3rem, 2.6vw, 1.8rem); font-family:'Space Grotesk',sans-serif; font-weight:500; line-height:1.5; color: var(--ink);">
+      I didn't start out chasing a title — I started because I loved seeing an idea I only had in my head
+      turn into something real on a screen. Every project here is a small piece of that feeling: curiosity,
+      a little stubbornness, and the quiet joy of watching something you built actually help someone.
+    </p>
+    <p style="margin-top:22px; color: var(--ink-dim); font-size:1.02rem; max-width: 58ch;">
+      That's still what drives me — not just writing code, but building things with care, for people,
+      that make their work or their day a little easier.
+    </p>
+    <div style="margin-top:26px; font-family:'Space Grotesk',sans-serif; color: var(--accent); font-size:1.1rem;">— Izhar Abbas</div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="section-head"><span class="idx mono">02</span><h2>Journey</h2></div>
+  <p class="section-lead">A path through building, learning, and shipping — edit these milestones with your real story.</p>
+  <div class="timeline">
+    <div class="t-item" data-reveal>
+      <div class="t-year mono">2024 — Present</div>
+      <div class="t-role">AI Engineer</div>
+      <div class="t-org">Independent / Freelance</div>
+      <div class="t-desc">Designing and shipping AI-driven tools and automations for clients — from LLM-powered workflows to custom internal apps.</div>
+    </div>
+    <div class="t-item" data-reveal>
+      <div class="t-year mono">2022 — 2024</div>
+      <div class="t-role">Full-Stack Developer</div>
+      <div class="t-org">Add your company here</div>
+      <div class="t-desc">Built and maintained production web applications, owning features end-to-end across frontend, backend, and deployment.</div>
+    </div>
+    <div class="t-item" data-reveal>
+      <div class="t-year mono">2020 — 2022</div>
+      <div class="t-role">Started building</div>
+      <div class="t-org">Self-taught & first projects</div>
+      <div class="t-desc">Learned to code by building real things — scripts, small tools, and side projects that turned into a career.</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-head"><span class="idx mono">03</span><h2>Skills</h2></div>
+  <p class="section-lead">The stack I reach for most, grouped by how I actually use it.</p>
+
+  <div class="skill-group-label">Core Services</div>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">AI Automation</span><span class="skill-level mono">Expert</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Online Data Scraping</span><span class="skill-level mono">Expert</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Email Collecting</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Research Specialist</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Social Media Management</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Microsoft Office Expert</span><span class="skill-level mono">Expert</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Web Designing</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Video Editing</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+  </div>
+
+  <div class="skill-group-label">Languages</div>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Python</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">JavaScript / TypeScript</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">C++</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">C</span><span class="skill-level mono">Proficient</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Java</span><span class="skill-level mono">Proficient</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Go</span><span class="skill-level mono">Intermediate</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Rust</span><span class="skill-level mono">Intermediate</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">PHP</span><span class="skill-level mono">Intermediate</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">HTML / CSS</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">SQL</span><span class="skill-level mono">Proficient</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div><div class="bar"></div></div></div>
+  </div>
+
+  <div class="skill-group-label">AI & Data</div>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">LLM Integration</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Automation & Agents</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Prompt Engineering</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+  </div>
+
+  <div class="skill-group-label">Tools & Platforms</div>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">React / Node.js</span><span class="skill-level mono">Advanced</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Git & CI/CD</span><span class="skill-level mono">Proficient</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div><div class="bar"></div></div></div>
+    <div class="skill-card"><div class="skill-top"><span class="skill-name">Cloud (AWS/GCP)</span><span class="skill-level mono">Intermediate</span></div><div class="bars"><div class="bar filled"></div><div class="bar filled"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
+  </div>
+</section>
+
+<section id="bank-accounts">
+  <div class="section-head">
+    <span class="idx mono">04</span>
+    <h2>Bank Accounts</h2>
+  </div>
+
+  <p class="section-lead">
+    Bank details and digital wallets for secure, convenient transfers.
+    Select any number to copy it instantly.
+  </p>
+
+  <div class="bank-group-label">Bank Accounts</div>
+
+  <div class="bank-grid">
+    <div class="bank-card">
+      <div class="bank-card-head">
+        <div>
+          <span class="bank-tag">BANK</span>
+          <h3>Bank of Punjab</h3>
+          <p class="bank-branch">DG Khan Kutchery Road</p>
+        </div>
+        <span class="bank-icon">BOP</span>
+      </div>
+      <div class="bank-holder">
+        <span>Account Holder</span>
+        <strong>Izhar Abbas</strong>
+      </div>
+      <div class="bank-detail">
+        <span>Account Number</span>
+        <div class="copy-row">
+          <code>6300316753600011</code>
+          <button class="copy-btn" data-copy="6300316753600011" aria-label="Copy BOP account number">Copy</button>
+        </div>
+      </div>
+      <div class="bank-detail">
+        <span>IBAN</span>
+        <div class="copy-row">
+          <code>PK86BPUN6300316753600011</code>
+          <button class="copy-btn" data-copy="PK86BPUN6300316753600011" aria-label="Copy BOP IBAN">Copy</button>
+        </div>
+      </div>
+      <div class="bank-footer">
+        <span>Branch Code</span>
+        <strong class="mono">0078</strong>
+      </div>
+    </div>
+
+    <div class="bank-card">
+      <div class="bank-card-head">
+        <div>
+          <span class="bank-tag">BANK</span>
+          <h3>Bank Alfalah</h3>
+          <p class="bank-branch">DG Khan Kutchery Road</p>
+        </div>
+        <span class="bank-icon">BA</span>
+      </div>
+      <div class="bank-holder">
+        <span>Account Holder</span>
+        <strong>Izhar Abbas</strong>
+      </div>
+      <div class="bank-detail">
+        <span>Account Number</span>
+        <div class="copy-row">
+          <code>08261009549173</code>
+          <button class="copy-btn" data-copy="08261009549173">Copy</button>
+        </div>
+      </div>
+      <div class="bank-detail">
+        <span>IBAN</span>
+        <div class="copy-row">
+          <code>PK22ALFH0826001009549173</code>
+          <button class="copy-btn" data-copy="PK22ALFH0826001009549173">Copy</button>
+        </div>
+      </div>
+      <div class="bank-footer">
+        <span>Branch Code</span>
+        <strong class="mono">0826</strong>
+      </div>
+    </div>
+
+    <div class="bank-card">
+      <div class="bank-card-head">
+        <div>
+          <span class="bank-tag">BANK</span>
+          <h3>Meezan Bank</h3>
+          <p class="bank-branch">Dera Ghazi Khan</p>
+        </div>
+        <span class="bank-icon">MB</span>
+      </div>
+      <div class="bank-holder">
+        <span>Account Holder</span>
+        <strong>Izhar Abbas</strong>
+      </div>
+      <div class="bank-detail">
+        <span>Account Number</span>
+        <div class="copy-row">
+          <code>00300108029979</code>
+          <button class="copy-btn" data-copy="00300108029979">Copy</button>
+        </div>
+      </div>
+      <div class="bank-detail">
+        <span>IBAN</span>
+        <div class="copy-row">
+          <code>PK97MEZN0000300108029979</code>
+          <button class="copy-btn" data-copy="PK97MEZN0000300108029979">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bank-card">
+      <div class="bank-card-head">
+        <div>
+          <span class="bank-tag">BANK</span>
+          <h3>United Bank Limited</h3>
+          <p class="bank-branch">Ghazi Ghat, DGK</p>
+        </div>
+        <span class="bank-icon">UBL</span>
+      </div>
+      <div class="bank-holder">
+        <span>Account Holder</span>
+        <strong>Izhar Abbas</strong>
+      </div>
+      <div class="bank-detail">
+        <span>Account Number</span>
+        <div class="copy-row">
+          <code>1076298276918</code>
+          <button class="copy-btn" data-copy="1076298276918">Copy</button>
+        </div>
+      </div>
+      <div class="bank-detail">
+        <span>IBAN</span>
+        <div class="copy-row">
+          <code>PK72UNIL0109000298276918</code>
+          <button class="copy-btn" data-copy="PK72UNIL0109000298276918">Copy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bank-group-label wallet-heading">Digital Wallets</div>
+
+  <div class="wallet-grid">
+    <div class="wallet-card">
+      <div class="wallet-symbol">E</div>
+      <div class="wallet-info">
+        <h3>Easypaisa</h3>
+        <span>Izhar Abbas</span>
+        <code>03302064088</code>
+      </div>
+      <button class="copy-btn" data-copy="03302064088">Copy</button>
+    </div>
+
+    <div class="wallet-card">
+      <div class="wallet-symbol">J</div>
+      <div class="wallet-info">
+        <h3>JazzCash</h3>
+        <span>Izhar Abbas</span>
+        <code>03302064088</code>
+      </div>
+      <button class="copy-btn" data-copy="03302064088">Copy</button>
+    </div>
+
+    <div class="wallet-card">
+      <div class="wallet-symbol">U</div>
+      <div class="wallet-info">
+        <h3>UPaisa</h3>
+        <span>Izhar Abbas</span>
+        <code>03302064088</code>
+      </div>
+      <button class="copy-btn" data-copy="03302064088">Copy</button>
+    </div>
+
+    <div class="wallet-card">
+      <div class="wallet-symbol">S</div>
+      <div class="wallet-info">
+        <h3>SadaPay</h3>
+        <span>Izhar Abbas</span>
+        <code>03302064088</code>
+      </div>
+      <button class="copy-btn" data-copy="03302064088">Copy</button>
+    </div>
+
+    <div class="wallet-card">
+      <div class="wallet-symbol">N</div>
+      <div class="wallet-info">
+        <h3>NayaPay</h3>
+        <span>Izhar Abbas</span>
+        <code>03302064088</code>
+      </div>
+      <button class="copy-btn" data-copy="03302064088">Copy</button>
+    </div>
+  </div>
+
+  <div class="copy-toast" id="bank-copy-toast" role="status" aria-live="polite"></div>
+</section>
+
+<section id="projects">
+  <div class="section-head"><span class="idx mono">05</span><h2>Projects</h2></div>
+  <p class="section-lead">A few things I've built. Swap these placeholders for your real projects and links.</p>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-icon">▣</div>
+      <div class="project-title">Project Name One</div>
+      <div class="project-desc">Short description of what this project does and the problem it solves.</div>
+      <div class="project-tags"><span class="tag">Python</span><span class="tag">LLM</span><span class="tag">API</span></div>
+      <a href="#" class="project-link">View project →</a>
+    </div>
+    <div class="project-card">
+      <div class="project-icon">◆</div>
+      <div class="project-title">Project Name Two</div>
+      <div class="project-desc">Short description of what this project does and the problem it solves.</div>
+      <div class="project-tags"><span class="tag">React</span><span class="tag">Node.js</span></div>
+      <a href="#" class="project-link">View project →</a>
+    </div>
+    <div class="project-card">
+      <div class="project-icon">⬡</div>
+      <div class="project-title">Project Name Three</div>
+      <div class="project-desc">Short description of what this project does and the problem it solves.</div>
+      <div class="project-tags"><span class="tag">Automation</span><span class="tag">Chrome Extension</span></div>
+      <a href="#" class="project-link">View project →</a>
+    </div>
+    <div class="project-card">
+      <div class="project-icon">◈</div>
+      <div class="project-title">Project Name Four</div>
+      <div class="project-desc">Short description of what this project does and the problem it solves.</div>
+      <div class="project-tags"><span class="tag">Data</span><span class="tag">Dashboard</span></div>
+      <a href="#" class="project-link">View project →</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-head"><span class="idx mono">06</span><h2>Contact</h2></div>
+  <div class="contact-wrap">
+    <div class="contact-cta">
+      <h2>Let's build something together.</h2>
+      <p>Open to freelance work, collaborations, and interesting problems. Reach out any way that's easiest for you.</p>
+    </div>
+    <div class="contact-list mono">
+      <a href="mailto:IzharAbbasBaloch@gmail.com" class="contact-row"><span>Email</span><span>IzharAbbasBaloch@gmail.com</span></a>
+      <a href="https://wa.me/923302064088" target="_blank" rel="noopener" class="contact-row"><span>WhatsApp</span><span>+92 330 2064088</span></a>
+      <a href="tel:+923302064088" class="contact-row"><span>Phone</span><span>+92 330 2064088</span></a>
+      <a href="#" class="contact-row"><span>GitHub</span><span>github.com/izharabbas</span></a>
+      <a href="#" class="contact-row"><span>LinkedIn</span><span>linkedin.com/in/izharabbas</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Izhar Abbas. All rights reserved.</div>
+  <div style="display:flex; gap:20px;">
+    <a href="#journey">Journey</a>
+    <a href="#skills">Skills</a>
+    <a href="#bank-accounts">Bank Accounts</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
