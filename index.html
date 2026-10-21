@@ -254,6 +254,7 @@
     <a href="#why" data-nav-link>Why I Build</a>
     <a href="#journey" data-nav-link>Journey</a>
     <a href="#skills" data-nav-link>Skills</a>
+    <a href="#bank-accounts" data-nav-link>Bank Accounts</a>
     <a href="#projects" data-nav-link>Projects</a>
     <a href="#contact" data-nav-link>Contact</a>
   </nav>
@@ -264,6 +265,7 @@
   <a href="#why" data-nav-link>Why I Build</a>
   <a href="#journey" data-nav-link>Journey</a>
   <a href="#skills" data-nav-link>Skills</a>
+  <a href="#bank-accounts" data-nav-link>Bank Accounts</a>
   <a href="#projects" data-nav-link>Projects</a>
   <a href="#contact" data-nav-link>Contact</a>
 </nav>
@@ -606,10 +608,10 @@
 <style>
 #bank-accounts {
   --bank-accent: var(--accent, #55d6a7);
-  --bank-panel: var(--card, #111815);
-  --bank-border: var(--border, #28352f);
-  padding: 24px 0;
-  color: var(--text, #f1f5f2);
+  --bank-panel: var(--bg-raised, #10141b);
+  --bank-border: var(--line, #28352f);
+  padding: 110px 6vw;
+  color: var(--ink, #e9ecf1);
 }
 
 #bank-accounts .section-head {
@@ -634,7 +636,7 @@
 }
 
 #bank-accounts .section-lead {
-  color: var(--muted, #9ba8a0);
+  color: var(--ink-dim, #8b93a3);
   line-height: 1.7;
   margin: 0 0 30px;
 }
@@ -693,7 +695,7 @@
 
 #bank-accounts .bank-branch {
   margin: 6px 0 0;
-  color: var(--muted, #9ba8a0);
+  color: var(--ink-dim, #8b93a3);
   font-size: 12px;
 }
 
@@ -726,7 +728,7 @@
 #bank-accounts .bank-holder span,
 #bank-accounts .bank-detail > span,
 #bank-accounts .bank-footer span {
-  color: var(--muted, #9ba8a0);
+  color: var(--ink-dim, #8b93a3);
 }
 
 #bank-accounts .bank-detail {
@@ -751,7 +753,7 @@
 #bank-accounts code {
   min-width: 0;
   overflow-wrap: anywhere;
-  color: var(--text, #f1f5f2);
+  color: var(--ink, #e9ecf1);
   font: 12px/1.6 monospace;
 }
 
@@ -825,7 +827,7 @@
 }
 
 #bank-accounts .wallet-info span {
-  color: var(--muted, #9ba8a0);
+  color: var(--ink-dim, #8b93a3);
   font-size: 11px;
 }
 
@@ -843,7 +845,7 @@
   border: 1px solid var(--bank-border);
   border-radius: 10px;
   background: var(--bank-panel);
-  color: var(--text, #f1f5f2);
+  color: var(--ink, #e9ecf1);
   box-shadow: 0 8px 30px #0002;
   font-size: 13px;
   opacity: 0;
@@ -861,6 +863,10 @@
   #bank-accounts .bank-grid,
   #bank-accounts .wallet-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  #bank-accounts {
+    padding: 80px 6vw;
   }
 
   #bank-accounts .bank-card {
@@ -937,7 +943,7 @@
 
   
 <section id="projects">
-  <div class="section-head"><span class="idx mono">04</span><h2>Projects</h2></div>
+  <div class="section-head"><span class="idx mono">05</span><h2>Projects</h2></div>
   <p class="section-lead">A few things I've built. Swap these placeholders for your real projects and links.</p>
   <div class="projects-grid">
     <div class="project-card">
@@ -972,7 +978,7 @@
 </section>
 
 <section id="contact">
-  <div class="section-head"><span class="idx mono">05</span><h2>Contact</h2></div>
+  <div class="section-head"><span class="idx mono">06</span><h2>Contact</h2></div>
   <div class="contact-wrap">
     <div class="contact-cta">
       <h2>Let's build something together.</h2>
@@ -993,6 +999,7 @@
   <div style="display:flex; gap:20px;">
     <a href="#journey">Journey</a>
     <a href="#skills">Skills</a>
+    <a href="#bank-accounts">Bank Accounts</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </div>
