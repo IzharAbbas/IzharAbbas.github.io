@@ -1,6 +1,7 @@
 // Liquid, cursor-reactive background
 (function(){
   const canvas = document.getElementById('fluid-bg');
+  if(!canvas) return;
   const ctx = canvas.getContext('2d');
   let w, h, dpr;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -73,11 +74,11 @@
   const navLinks = document.querySelectorAll('[data-nav-link]');
   const toggle = document.getElementById('nav-toggle');
   const mobileNav = document.getElementById('mobile-nav');
-  const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href')));
+  const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
 
   function closeMobileMenu(){
-    toggle.classList.remove('open');
-    mobileNav.classList.remove('open');
+    if(toggle) toggle.classList.remove('open');
+    if(mobileNav) mobileNav.classList.remove('open');
   }
 
   navLinks.forEach(link => {
@@ -85,20 +86,22 @@
       e.preventDefault();
       const target = document.querySelector(link.getAttribute('href'));
       if (!target) return;
-      const headerH = header.offsetHeight;
+      const headerH = header ? header.offsetHeight : 0;
       const top = target.getBoundingClientRect().top + window.scrollY - headerH + 1;
       window.scrollTo({ top, behavior: 'smooth' });
       closeMobileMenu();
     });
   });
 
-  toggle.addEventListener('click', () => {
-    toggle.classList.toggle('open');
-    mobileNav.classList.toggle('open');
-  });
+  if(toggle && mobileNav){
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+  }
 
   function setActive(){
-    const headerH = header.offsetHeight + 20;
+    const headerH = (header ? header.offsetHeight : 0) + 20;
     let current = sections[0];
     sections.forEach(sec => {
       if (sec && sec.getBoundingClientRect().top - headerH <= 0){
@@ -106,7 +109,7 @@
       }
     });
     navLinks.forEach(link => {
-      link.classList.toggle('active', current && link.getAttribute('href'] === '#' + current.id);
+      link.classList.toggle('active', current && link.getAttribute('href') === ('#' + current.id));
     });
   }
   setActive();
@@ -115,29 +118,33 @@
 })();
 
 // Typewriter effect for hero terminal
-const text = "Izhar Abbas — AI Automation, Development & Digital Services";
-const el = document.getElementById('typed');
-let i = 0;
-function type(){
-  if(i <= text.length){
-    el.textContent = text.slice(0, i);
-    i++;
-    setTimeout(type, 45);
+(function(){
+  const text = "Izhar Abbas — AI Automation, Development & Digital Services";
+  const el = document.getElementById('typed');
+  if(!el) return;
+  let i = 0;
+  function type(){
+    if(i <= text.length){
+      el.textContent = text.slice(0, i);
+      i++;
+      setTimeout(type, 45);
+    }
   }
-}
-type();
+  type();
+})();
 
-// scroll reveal
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
-}, { threshold: 0.15 });
-document.querySelectorAll('[data-reveal]').forEach(el=> observer.observe(el));
+// Scroll reveal
+(function(){
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('[data-reveal]').forEach(el=> observer.observe(el));
+})();
 
 // Bank account copy functionality
-(() => {
+(function() {
   const section = document.getElementById("bank-accounts");
-  if (!section || section.dataset.copyReady) return;
-  section.dataset.copyReady = "true";
+  if (!section) return;
 
   const toast = section.querySelector("#bank-copy-toast");
   let toastTimer;
@@ -172,16 +179,20 @@ document.querySelectorAll('[data-reveal]').forEach(el=> observer.observe(el));
     try {
       await copyText(value);
       button.textContent = "Copied ✓";
-      toast.textContent = "Copied successfully: " + value;
-      toast.classList.add("show");
-    } catch {
-      toast.textContent = "Copy failed. Please select and copy manually.";
-      toast.classList.add("show");
+      if(toast){
+        toast.textContent = "Copied successfully: " + value;
+        toast.classList.add("show");
+      }
+    } catch (err) {
+      if(toast){
+        toast.textContent = "Copy failed. Please select and copy manually.";
+        toast.classList.add("show");
+      }
     }
 
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => {
-      toast.classList.remove("show");
+      if(toast) toast.classList.remove("show");
       section.querySelectorAll(".copy-btn").forEach((btn) => {
         btn.textContent = "Copy";
       });
