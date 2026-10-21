@@ -231,11 +231,11 @@ footer a:hover{ color: var(--accent); }
   [data-reveal]{ opacity:1; transform:none; }
 }
 
-/* Bank Accounts Section Custom Styles */
+/* Bank Accounts Section Custom Styles - Dark Black Theme */
 #bank-accounts {
-  --bank-accent: var(--accent, #55d6a7);
-  --bank-panel: var(--bg-raised, #10141b);
-  --bank-border: var(--line, #28352f);
+  --bank-accent: var(--accent, #5eead4);
+  --bank-panel: #0d1117; /* Rich Dark Black */
+  --bank-border: #1f2937; /* Dark Subtle Border */
   padding: 110px 6vw;
   color: var(--ink, #e9ecf1);
 }
@@ -287,13 +287,16 @@ footer a:hover{ color: var(--accent); }
   border: 1px solid var(--bank-border);
   border-radius: 16px;
   background: var(--bank-panel);
-  transition: border-color .2s, transform .2s;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  transition: border-color .3s, transform .3s, background .3s, box-shadow .3s;
 }
 
 #bank-accounts .bank-card:hover,
 #bank-accounts .wallet-card:hover {
   border-color: var(--bank-accent);
-  transform: translateY(-2px);
+  background: #111622;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px -10px rgba(94, 234, 212, 0.15);
 }
 
 #bank-accounts .bank-card-head {
@@ -332,10 +335,10 @@ footer a:hover{ color: var(--accent); }
   place-items: center;
   width: 44px;
   height: 44px;
-  border: 1px solid var(--bank-border);
+  border: 1px solid rgba(94, 234, 212, 0.2);
   border-radius: 12px;
   color: var(--bank-accent);
-  background: color-mix(in srgb, var(--bank-accent) 9%, transparent);
+  background: rgba(94, 234, 212, 0.06);
   font: 700 12px monospace;
 }
 
